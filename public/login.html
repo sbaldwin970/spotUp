@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+  <link href="/login.css" rel="stylesheet" style="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="container">
+    <img src="http://a.espncdn.com/photo/2012/0917/as_skate_SwBsLip_1536.jpg"/>
+  </div>
+    
+  
+  <div class="conContainer">
+    <h1 class="spotUp">Spot Up.<br>Throw down.<br>Conquer.</h1>
+      <div class="the">
+	     <div class="signIn">
+        <h3 class="SI">Sign In</h3>
+         <form action="/auth/login" method="post">
+         <input class="what" type="text" name="username" placeholder="Email"/>
+         <input class="what" type="password" name="password" placeholder="Password"/>
+        <!-- <button class="buttonFix">-->
+         <input class="go" value=">" type="submit"/>
+        <!-- </button>-->
+        </form>
+       </div>
+  
+
+  <div class="signUp">
+    <h3 class="SU">Sign Up</h3>
+      <form action="/auth/signup" method="post">
+        <input class="what" type="text" name="name" placeholder="Username"/>
+         <input class="what" type="email" name="email" placeholder="Email"/>
+         <input class="what" type="password" name="password" placeholder="Password"/>
+          <input class="go" value=">" type="submit"/>
+       </form>
+     </div>
+   </div>
+  </div>
+
+
+
+
+</body>
+</html>

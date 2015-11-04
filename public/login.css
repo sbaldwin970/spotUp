@@ -1,0 +1,87 @@
+body {
+	background-color: black;
+	margin: 0;
+	font-family: Lato;
+	height: 1000px;
+}
+.container {
+	position: relative;
+	text-align: center;
+	height: 1px;
+	background-color: #222222;
+}
+.spotUp {
+	text-align: left;
+	margin-left: 60px;
+	font-size: 100px;
+	color: orange;
+	margin-bottom: 70px;
+	text-decoration: ;
+}
+img {
+	height: 1400px;
+	width: 1300px;
+	position: relative;
+	z-index: -1;
+	overflow: hidden;
+	box-shadow: 0px 0px 200px gray;
+	border-radius: 5px;
+}
+.signIn, .signUp {
+	vertical-align: middle;
+	display: inline-block;
+	margin: 70px;
+	height: 180px;
+	width: 450px;
+	border: 2px solid orange;
+	background-color: black;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+
+.SI, .SU {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	outline-color: orange; 
+}
+.what {
+	height: 30px;
+	width: 180px;
+	border: 1px solid orange;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: black;
+	color: white;
+	margin: 5px;
+}
+.what:hover {
+	cursor: inherit;
+}
+.go {
+	padding: 0;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	border: 1px solid #DE842A;
+	background-color: orange;
+	border-radius: 10px;
+	color: white;
+
+}
+.go:hover {
+	cursor: pointer;
+}
+.the {
+	text-align: center;
+}
+.conContainer {
+	margin: 0 auto;
+	width: 1300px;
+	height: 100vh;
+}
+

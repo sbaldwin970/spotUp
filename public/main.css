@@ -1,0 +1,195 @@
+body {
+	margin: 0;
+	font-family: Lato;
+	background-color: black;
+}
+.body-container {
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+	background-color: white;
+}
+.top-container {
+	position: relative;
+	height: 70px;
+	width: 100vw;
+	display: inline-block;
+	margin-bottom: 30px;
+	background-color: #4F4845;
+}
+
+.appName {
+	padding-top: 15px;
+	margin-left: 20px;
+	display: inline-block;
+	font-size: 20px;
+	color: orange;
+}
+i {
+	margin-top: 10px;
+	margin-left: 20px;
+	color: white;
+}
+i:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+.stateSelector {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.select {
+	font-size: 30px;
+	text-align: center;
+	color: orange;
+}
+.downArrow {
+	text-align: center;
+}
+.content-container {
+	position: relative;
+}
+.obsticles {
+	position: relative;
+	text-align: center;
+}
+.ledges, .stairs-handrails, .transition {
+	display: inline-block;
+	height: 500px;
+	width: 350px;
+	background-color: #F0F0F0;
+	border: 3px solid #4F4845;
+	/*border-radius: 5px;*/
+	margin: 6px;
+	overflow: auto;
+
+}
+.obName {
+	position: relative;
+	color: white;
+	font-size: 18px;
+	background-color: black;
+	border-bottom: 3px solid orange;
+	font-weight: bolder;
+}
+.name {
+	background-color: #4F4845;
+	border-bottom: 1px solid orange;
+}
+.name:hover {
+	cursor: pointer;
+}
+.spotsDisplay {
+	overflow: hidden;
+	border: 1px solid orange;
+	margin: 5px;
+	box-shadow: 0px 0px 30px black;
+	color: orange;
+	background-color: #DBDBDB;
+	font-weight: bold;
+	/*border-top-right-radius: 10px;*/
+	border-radius: 10px;
+}
+/*.spotsDisplay:hover {
+	box-shadow: 0px 0px 30px black
+}*/
+.picture img {
+	height: 80px;
+	width: 80px;
+	border: 2px solid white;
+	border-radius: 5px;
+	vertical-align: middle;
+	margin-top: 3px;
+	box-shadow: 0px 0px 20px gray;
+}
+.picture {
+	float: left;
+	margin: 5px;
+}
+.upload {
+	float: right;
+	margin: 5px;
+}
+.noPad {
+	padding: 0;
+}
+iframe {
+	margin: 10px;
+	display: block;
+	height: 120px;
+	width: 200px;
+}
+
+.bottom {
+	height: 100px;
+	width: 100vw;
+	background-color: #252525;
+}
+.vidDecoration {
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0px 0px 20px;
+}
+.vidDecoration:hover {
+	box-shadow: 0px 0px 20px solid gray;
+}
+.modal-body {
+	background-color: #F0F0F0;
+}
+.vidTag {
+	margin-left: 10px;
+}
+.scoreSelect {
+	/*display: inline-block;*/
+	float: right;
+	margin: auto;
+}
+.trickScore {
+	text-align: center;
+}
+.score {
+	float: right;
+	margin-right: 150px;
+	text-align: center;
+}
+.strike {
+	height: 3px;
+	width: 563px;
+	background-color: orange;
+	/*overflow: hidden;*/
+}
+.leaderBoard {
+	margin-top: 15px;
+	float: left;
+	text-align: left;
+	vertical-align: middle;
+	/*margin-right: 100px;*/
+	font-family: sans-serif;
+	color: black;
+}
+.first {
+	color: orange;
+}
+.downStrike {
+	float: left;
+	display: inline-block;
+	width: 1px;
+	height: 101px;
+	background-color: orange;
+}
+.dot {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+	background-color: green;
+}
+.spacer {
+	width: 5px;
+	display: inline-block;
+}
+
