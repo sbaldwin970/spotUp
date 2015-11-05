@@ -1,3 +1,4 @@
+
 var Spots = require('../models/spots');
 
 var Submissions = require('../models/submission')
@@ -38,6 +39,8 @@ module.exports = {
 				spot : req.body.spot,
 				userSubmitted : req.user._id,
 				timeStamp : new Date(),
+				rating: 0,
+				usersRated: 0
 			});
 
 			console.log("Made submission")
@@ -59,8 +62,32 @@ module.exports = {
 		})
 	},
 	userVids : function(req, res) {
-	Submissions.find({userSubmitted : req.user._id}, function(err, doc){
+		Submissions.find({userSubmitted : req.user._id}, function(err, doc){
 			res.send(doc)
+		})
+	},
+	rate : function(req, res) {
+		Submissions.findOne({_id : req.body.submissionId}, function(err, doc) {
+			var newRating;
+			newRating = ((doc.usersRated * doc.rating) + req.body.x) / (doc.usersRated + 1)
+
+			Submissions.update({ _id: doc._id },
+				{ $set: {
+					rating: newRating,
+					usersRated: doc.usersRated + 1
+				}}, function(err, doc) {
+					if (err) {
+						res.send(false);
+					} else {
+						res.send({ newRating: newRating });
+					}
+				});
+		})
+	},
+
+	sort: function(req, res) {
+		Submissions.find({ spot: req.params.spotId }).sort({ rating: -1 }).limit(3).populate('userSubmitted').then(function(data) {
+			res.send(data);
 		})
 	}
 }

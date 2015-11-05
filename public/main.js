@@ -3,8 +3,14 @@ angular.module('spotUp', ['ngRoute', 'ui.bootstrap'])
 var mainController = function($scope, $http, $uibModal, $sce) {
 	$scope.stateSelect = "CO";
 	var vidsArray = [];
+
+
 	$http.get('/api/spots').then(function(res){
 		$scope.spots = res.data;
+
+		for (var i = 0; i < $scope.spots.length; i++) {
+			$scope.loadLeaderboard($scope.spots[i]);
+		}
 	})
 	$http.get('/api/me').then(function(returnData) {
 		$scope.user = returnData.data;
@@ -37,6 +43,7 @@ var mainController = function($scope, $http, $uibModal, $sce) {
       		}
     	})
     },
+
     $scope.otherDisplay = function(spot) {
     	$scope.spot = spot;
     	console.log(spot)
@@ -58,6 +65,14 @@ var mainController = function($scope, $http, $uibModal, $sce) {
       		}
     	})
     }
+
+    $scope.loadLeaderboard = function(spot) {
+
+    	$http.get("/api/sort/" + spot._id).then(function(res) {
+    		spot.leaderBoard = res.data;
+    		console.log(res.data);
+    	})
+    }
 }
    
  var spotDisplayController = function(spot, $sce, $scope, $http, vidsArray){
@@ -72,12 +87,19 @@ var mainController = function($scope, $http, $uibModal, $sce) {
 		$scope.vidsArray = res.data;
 		console.log(res.data)
 	});
+	    $scope.submitRating = function(video, scoreSelect) {
+		console.log(video, scoreSelect)
+		$http.post('/api/rate', {
+			submissionId: video._id, x: parseInt(scoreSelect)
+		})
+    	}
 	$scope.display = function() {
 		$http.post('/api/upload',{videoUrl: $scope.videoUrl, spot: $scope.spot}).then(function(returnData) {
 			$scope.vidsArray.push(returnData.data)
 		})
 
-	}
+	},
+
 	$scope.getEmbedUrlFromVideoId = function(videoId) {
 		return 'http://youtube.com/embed/' + videoId
 	};

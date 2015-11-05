@@ -6,6 +6,8 @@ var submissionSchema = new Schema({
 	spot : {type: Schema.Types.ObjectId, ref: 'spots'},
 	userSubmitted : {type: Schema.Types.ObjectId, ref: 'users'},
 	timeStamp : Date,
+	rating : Number,
+	usersRated : Number
 
 });
 

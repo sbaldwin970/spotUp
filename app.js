@@ -72,6 +72,8 @@ app.get('/profile', function(req, res) {
 	res.sendFile('/profile.html', { root: './public'})
 })
 app.get('/api/userVids', apiController.userVids)
+app.post('/api/rate', apiController.rate)
+app.get('/api/sort/:spotId', apiController.sort)
 
 
 
