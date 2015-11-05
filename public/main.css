@@ -7,7 +7,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	margin: 0 auto;
-	background-color: white;
+	background-color: #2E2E2E;
 }
 .top-container {
 	position: relative;
@@ -16,6 +16,7 @@ body {
 	display: inline-block;
 	margin-bottom: 30px;
 	background-color: #4F4845;
+	border-bottom: 3px solid orange;
 }
 
 .appName {
@@ -40,12 +41,13 @@ i:hover {
 	margin-bottom: 40px;
 }
 .select {
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	color: orange;
 }
 .downArrow {
 	text-align: center;
+	color: #4F4845;
 }
 .content-container {
 	position: relative;
@@ -56,43 +58,44 @@ i:hover {
 }
 .ledges, .stairs-handrails, .transition {
 	display: inline-block;
-	height: 500px;
+	height: 470px;
 	width: 350px;
-	background-color: #F0F0F0;
-	border: 3px solid #4F4845;
-	/*border-radius: 5px;*/
+	background-color: #EBEBEB;
+	border: 3px solid orange;
+	border-radius: 5px;
 	margin: 6px;
 	overflow: auto;
+	box-shadow: 0px 0px 10px white;
 
 }
 .obName {
 	position: relative;
 	color: white;
 	font-size: 18px;
-	background-color: black;
+	background-color: #4F4845;
 	border-bottom: 3px solid orange;
 	font-weight: bolder;
 }
 .name {
 	background-color: #4F4845;
-	border-bottom: 1px solid orange;
+	border-bottom: 3px solid orange;
 }
 .name:hover {
 	cursor: pointer;
 }
 .spotsDisplay {
 	overflow: hidden;
-	border: 1px solid orange;
+	border: 3px solid orange;
 	margin: 5px;
 	box-shadow: 0px 0px 30px black;
 	color: orange;
-	background-color: #DBDBDB;
+	background-color: black;
 	font-weight: bold;
-	/*border-top-right-radius: 10px;*/
-	border-radius: 10px;
+	border-top-right-radius: 10px;
+	/*border-radius: 10px;*/
 }
 /*.spotsDisplay:hover {
-	box-shadow: 0px 0px 30px black
+	box-shadow: 0px 0px 30px black;
 }*/
 .picture img {
 	height: 80px;
@@ -169,7 +172,7 @@ iframe {
 	vertical-align: middle;
 	/*margin-right: 100px;*/
 	font-family: sans-serif;
-	color: black;
+	color: white;
 }
 .first {
 	color: orange;
@@ -177,7 +180,7 @@ iframe {
 .downStrike {
 	float: left;
 	display: inline-block;
-	width: 1px;
+	width: 3px;
 	height: 101px;
 	background-color: orange;
 }
